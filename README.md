@@ -1,2 +1,2 @@
 # GaLab6
-GitHub Actions tests
+GitHub Actions tests0
