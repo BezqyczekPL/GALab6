@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: Dockerfile
+          file: /FibCalc/Dockerfile
           push: true
           tags: bezqyczekpl/zadanie1:1
           
