@@ -29,8 +29,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v3
         with:
-          context: ./
-          file: FibCalc/Dockerfile
+          context: .
+          file: Dockerfile
           push: true
           tags: bezqyczekpl/zadanie1:1
           
