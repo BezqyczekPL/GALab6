@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FibCalc</title>
+    </head>
+    <body>
+        <h1>Kalkulator Fibonacciego</h1>
+        <form>
+            Wprowadź indeks:
+            <input type="number" id="index">
+            <br>
+            <br>
+            <button type="button" onclick="calculateFibonacci()">Oblicz</button>
+        </form>
+        <br>
+        <br>
+        <p>Wynik: <span id="result"></span></p>
+
+        <script>
+            function calculateFibonacci() {
+                // Pobierz indeks z formularza
+                const index = document.getElementById("index").value;
+
+                // Zainicjalizuj zmienne pomocnicze
+                let a = 0;
+                let b = 1;
+                let c;
+
+                if (index == 1)
+                    c = 1;
+                else
+                {
+                    // Oblicz wartość w ciągu Fibonacciego dla danego indeksu
+                    for (let i = 2; i <= index; i++) {
+                        c = a + b;
+                        a = b;
+                        b = c;
+                    }
+                }
+                // Wyświetl wynik
+                document.getElementById("result").innerHTML = c;
+            }
+        </script>
+        <br>
+        <br>
+        <p>Dawid Nicpoń</p>
+        <p>Grupa I2S 1.3</p>
+    </body>
+</html>
